@@ -1,0 +1,337 @@
+/*头部开始*/
+header {
+    width: 100%;
+    height: 50px;
+    background: #C63465;
+    padding:10px  ;
+    box-sizing: border-box;
+}
+header .logo {
+    display: inline-block;
+    width: 142px;
+    height: 30px;
+
+}
+header .logo img {
+    width: 100%;
+    height: 100%;
+}
+header nav {
+    /*padding: 10px;*/
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    background: url("../images/navbg.png") no-repeat center/cover ;
+
+
+}
+header nav #bb {
+    float: right;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+header nav ul {
+    position: absolute;
+    left: -20px;
+    top: 40px;
+    width: 70px;
+    z-index: 100;
+    display: none;
+
+}
+header nav ul li {
+    width: 100%;
+    line-height: 35px;
+    background: #C63465;
+    text-align: center;
+
+
+}
+header nav ul li a {
+    width: 100%;
+    color: white;
+}
+/*****轮播图*******/
+.contain {
+    position: relative;
+}
+.contain .slide .carousel-indicators li{
+    background: #C63465;
+}
+.contain .item img {
+    width: 100%;
+    height: 100%;
+}
+.contain .carousel-control {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    font-size: 40px;
+    background: lightpink;
+    opacity: 0.3;
+    height: 40px;
+    line-height: 40px;
+
+}
+.contain .carousel-control:focus {
+    background: #C63465;
+
+}
+#bb {
+    width: 60px;
+    height: 60px;
+    background: none;
+    border: none;
+}
+/*搜索栏*/
+.serach {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+.serach input {
+    margin-left: 15px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    width: 70%;
+    height: 30px;
+    border: 2px solid #C63465;
+}
+.serach button {
+    width: 20%;
+    height: 30px;
+    background: #C63465;
+    box-sizing: border-box;
+    border: none;
+    color: white;
+    border-radius: 7px;
+}
+/*内容区域*/
+.catarge {
+    width: 100%;
+
+}
+.catarge ul {
+    width: 100%;
+
+
+}
+.catarge ul li img{
+
+}
+/*产品信息*/
+.product {
+    width: 100%;
+    padding-top: 30px;
+
+
+}
+ .pro-title  {
+    position: relative;
+    padding-left: 30px;
+    padding-top: 1px;
+    padding-right: 30px;
+    border-bottom: 1px dashed #C63465;
+}
+ .pro-title h4 {
+    text-align: right;
+    color: #C63465;
+
+}
+.pro-title h4::before{
+content: '';
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 5px;
+    height: 35px;
+    background: #C63465;
+}
+.flower-detial li {
+
+    border-bottom: 5px solid #C63465;
+;
+}
+.flower-detial li img{
+    width: 100%;
+    height: 100%;
+}
+.flower-detial li p {
+    text-align: center;
+}
+/****介绍****/
+.troduct {
+    width: 100%;
+}
+.tro-text li {
+    width: 100%;
+
+}
+.tro-text li .product-left {
+    float: left;
+   overflow: hidden;
+    width: 35%;
+    margin-right: 20px;
+}
+.tro-text li .product-left img {
+    width: 100%;
+}
+.tro-text li .product-text {
+    padding: 18px;
+    font-size: 12px;
+}
+.tro-text li .product-text .product-title {
+    color: olivedrab;
+    line-height: 35px;
+}
+.tro-text li .product-text .product-critics {
+    color: palevioletred;
+    line-height: 25px;
+}
+footer {
+    width: 100%;
+    height: 170px;
+    background: #C63465;
+    text-align: center;
+    line-height: 100px;
+}
+.footr-static {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    z-index: 5000;
+    width: 100%;
+    background: #C63465;
+    height: 70px;
+}
+.footr-static .static-top {
+    width: 100%;
+    height: 16px;
+    background: deeppink;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.footr-static .static-top .srrow {
+    width: 25px;
+    height: 25px;
+    background: white;
+    transform: rotateZ(45deg);
+
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    margin-left: -12px;
+
+}
+.footr-static  ul {
+    display: flex;
+    height: 54px;
+}
+.footr-static  ul li {
+    flex: 1;
+    background: #F9F9F9;
+
+    text-align: center;
+    line-height: 54px;
+    margin: 5px;
+    border-radius:7px ;
+
+
+}
+.tro-text-li {
+    border-bottom: 1px dashed #C63465;
+}
+.footr-static  ul li span {
+    display: inline-block;
+    width: 25px;
+    height: 22px;
+
+}
+.footr-static  ul li:nth-child(1) span{
+
+     background: url("../images/mobile-icons.png") no-repeat 0px 0px ;
+
+ }
+.footr-static  ul li:nth-child(2) span{
+
+    background: url("../images/mobile-icons.png") no-repeat 0px -22px ;
+
+}
+.footr-static  ul li:nth-child(3) span{
+
+    background: url("../images/mobile-icons.png") no-repeat 0px -50px ;
+
+}
+.footr-static  ul li:nth-child(4) span{
+
+    background: url("../images/mobile-icons.png") no-repeat 0px -73px ;
+
+}
+/*产品简介*/
+.brand-tro {
+    width: 100%;
+    text-align: center;
+    padding: 20px 20px 80px 20px;
+}
+/*最新动听*/
+.new-status {
+    width: 100%;
+    padding: 10px 10px 80px 10px;
+}
+.new-status .new-nav {
+   margin: 10px 0px;
+    width: 100%;
+    border-radius: 7px;
+    background: #C63465;
+    box-shadow: 0px 0px 1px 1px #fff;
+}
+
+.new-status .new-nav ul li {
+    padding-left: 20px;
+}
+.new-status .new-nav ul li a {
+    font-size: 20px;
+    color: white;
+    line-height: 36px;
+}
+.new-status .new-histroy {
+    width: 100%;
+    padding: 20px 30px;
+}
+.new-status .new-histroy .adress {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+.new-status .new-histroy .adress .bd {
+    border: 1px solid #000;
+    display: inline-block;
+    padding: 2px;
+}
+
+/*small*/
+.hidd2 {
+    position: fixed;
+    left: 0px;
+    bottom: 60px;
+    width: 70px;
+    z-index: 100;
+    display: none;
+
+}
+.hidd2 li {
+    width: 100%;
+    line-height: 35px;
+    background: #C63465;
+    text-align: center;
+
+
+}
+.hidd2 li a {
+    width: 100%;
+    color: white;
+}

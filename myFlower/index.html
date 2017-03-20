@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>鲜花超市</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="lib/jquery/jquery.js"></script>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+</head>
+<body ng-app='flower'>
+<!--头部开始-->
+<div class="footr-static">
+    <div class="static-top"><span class="srrow"></span></div>
+
+    <ul>
+        <li><span  id="hidd2show"></span></li>
+        <li><span ></span></li>
+        <li><span ></span></li>
+        <li><span ></span></li>
+    </ul>
+</div>
+<!--小导航-->
+<ul  class="hidd2" id="hidd2">
+<li ><a href="#/first">首页</a></li>
+<li ><a href="#/brand">品牌简介</a></li>
+<li ><a href="#/news">最新动态</a></li>
+<li ><a href="#/product">产品中心</a></li>
+<li ><a href="#/shop">招商加盟</a></li>
+</ul>
+
+<header>
+    <div class="logo"><img src="images/tf.png" alt=""/></div>
+    <nav class="sh" id="sh">
+<button id="bb"></button>
+            <ul  class="hidd" id="hidd">
+                <li ><a href="#/first">首页</a></li>
+                <li ><a href="#/brand">品牌简介</a></li>
+                <li ><a href="#/news">最新动态</a></li>
+                <li ><a href="#/product">产品中心</a></li>
+                <li ><a href="#/shop">招商加盟</a></li>
+            </ul>
+
+    </nav>
+</header>
+<!--banner图-->
+
+<div class="container-flower">
+
+    <div class="ng-view"></div>
+</div>
+<footer>
+    <span>地址：********</span>
+</footer>
+
+
+
+
+
+</body>
+<script src="js/index.js"></script>
+<script>
+    var sh=document.getElementById('bb'),
+     hid=document.getElementById('hidd'),
+     hidd2show=document.getElementById('hidd2show'),
+            hidd2=document.getElementById('hidd2')
+
+    $(function () {
+        nav_event(sh,hid);
+        nav_event(hidd2show,hidd2);
+        drop();
+    })
+    //导航栏点击事件
+    function nav_event(sh,hid) {
+        var flag=true;
+        sh.onclick=function (e) {
+            if (flag){
+                hid.style.borderRadius='7px';
+                hid.style.display='block';
+                flag=false;
+            }else {
+                hid.style.display='none';
+                //hidden.style.zIndex=1000;
+                flag=true;
+            }
+        }
+    }
+    function drop() {
+        document.onscroll = function (event) {
+            var event = event || window.event;
+            if (document.body.scrollTop >= 50) {
+                $('header')[0].style.position = 'fixed';
+                $('header')[0].style.top = '0px';
+                $('header')[0].style.right = '0px';
+                $('header')[0].style.zIndex = 500000;
+                $('.contain')[0].style.marginTop = '50px';
+            } else {
+                $('header')[0].style.position = 'relative';
+                $('.contain')[0].style.marginTop = '0px';
+            }
+
+        }
+    }
+
+</script>
+<script src="js/index.js"></script>
+<script src='node_modules/angular/angular.js'></script>
+<script src='node_modules/angular-route/angular-route.js'></script>
+<script src="myFlower.js"></script>
+<script src="first/first.js"></script>
+<script src="brand/brand.js"></script>
+<script src="news/news.js"></script>
+<script src="product/product.js"></script>
+<script src="shop/shop.js"></script>
+</html>
